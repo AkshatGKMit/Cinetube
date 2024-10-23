@@ -74,8 +74,6 @@ yarn.lock
 Gemfile.lock
 package-lock.json
 
-
-test.tsx
 dummy/
 
 debug.keystore

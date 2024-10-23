@@ -18,6 +18,6 @@
     },
     "types": []
   },
-  "include": ["./src/**/*", "./*.js"],
+  "include": ["./src/**/*"],
   "exclude": ["*.json"]
 }
