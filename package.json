@@ -7,7 +7,18 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "clean": "npm run clean-node && npm run clean-ios && npm run clean-android",
+    "clean-node": "rm -rf node_modules package-lock.json yarn.lock",
+    "clean-ios": "rm -rf ios/Podfile.lock ios/Pods ios/build",
+    "clean-android": "rm -rf android/.gradle android/build",
+    "build-node": "npm install",
+    "build-ios": "cd ios && pod install",
+    "start-reset": "npx react-native start -- --reset-cache",
+    "build-android": "cd android && ./gradlew clean",
+    "restart-ios": "npm run clean && npm run build-node && npm run build-ios && npm start -- --reset-cache",
+    "restart-android": "npm run clean && npm run build-node && npm run build-android && npm start -- --reset-cache",
+    "restart": "npm run clean && npm run build-node && npm run build-ios && npm run build-android && npm start -- --reset-cache"
   },
   "dependencies": {
     "react": "18.3.1",
