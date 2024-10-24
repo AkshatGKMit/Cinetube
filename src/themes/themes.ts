@@ -26,6 +26,12 @@ const Theme: Theme = {
       placeholder: Colors.darkGrey.opacityC,
       ddShadow: Colors.black.opacityF,
     },
+    actionButton: {
+      background: Light.c1,
+      text: Colors.white.opacityF,
+      disabledBG: Colors.lightGrey.opacityA,
+      disabledText: Colors.darkGrey.opacityF,
+    },
   },
   dark: {
     screenBG: Colors.black.black11,
@@ -51,6 +57,12 @@ const Theme: Theme = {
       text: Colors.white.opacityC,
       placeholder: Colors.lightGrey.opacityC,
       ddShadow: Colors.white.opacityF,
+    },
+    actionButton: {
+      background: Dark.c1,
+      text: Colors.white.opacityF,
+      disabledBG: Colors.darkGrey.opacityA,
+      disabledText: Colors.lightGrey.opacityF,
     },
   },
 };

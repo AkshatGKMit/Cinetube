@@ -26,6 +26,12 @@ declare global {
       placeholder: string;
       ddShadow: string;
     };
+    actionButton: {
+      background: string;
+      text: string;
+      disabledBG: string;
+      disabledText: string;
+    };
   }
 
   interface Theme {
