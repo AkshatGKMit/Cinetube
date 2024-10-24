@@ -1,3 +1,3 @@
-import WrappedApp from './wrappedApp/WrappedApp';
+import AppContainer from './AppContainer/AppContainer';
 
-export default WrappedApp;
+export default AppContainer;

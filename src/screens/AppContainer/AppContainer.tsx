@@ -2,7 +2,7 @@ import { Text, SafeAreaView } from 'react-native';
 import PlatformStatusBar from '@components/platformStatusBar';
 import globalStyles from '@styles/global';
 
-const WrappedApp = () => {
+const AppContainer = () => {
   return (
     <>
       <PlatformStatusBar />
@@ -13,4 +13,4 @@ const WrappedApp = () => {
   );
 };
 
-export default WrappedApp;
+export default AppContainer;

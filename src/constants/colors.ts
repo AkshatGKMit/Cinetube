@@ -1,11 +1,11 @@
 export const Light = {
-  c1: '#7a18e3',
-  c2: '#691abf',
-  c3: '#581a9d',
-  c4: '#48197b',
-  c5: '#37165c',
-  c6: '#28133e',
-  c7: '#190c22',
+  shade1: '#7a18e3',
+  shade2: '#691abf',
+  shade3: '#581a9d',
+  shade4: '#48197b',
+  shade5: '#37165c',
+  shade6: '#28133e',
+  shade7: '#190c22',
   error: '#D00020',
   placeholder: '#00000080',
   focusedPlaceholder: '#7a18e380',
@@ -13,19 +13,19 @@ export const Light = {
 } as const;
 
 export const LightOpacity = {
-  c1o10: `${Light.c1}10`,
-  c1o15: `${Light.c1}15`,
-  c1o20: `${Light.c1}20`,
+  c1o10: `${Light.shade1}10`,
+  c1o15: `${Light.shade1}15`,
+  c1o20: `${Light.shade1}20`,
 };
 
 export const Dark = {
-  c1: '#a218f6',
-  c2: '#b349f8',
-  c3: '#c36bfa',
-  c4: '#d28afc',
-  c5: '#dfa8fe',
-  c6: '#ebc5ff',
-  c7: '#f5e2ff',
+  shade1: '#a218f6',
+  shade2: '#b349f8',
+  shade3: '#c36bfa',
+  shade4: '#d28afc',
+  shade5: '#dfa8fe',
+  shade6: '#ebc5ff',
+  shade7: '#f5e2ff',
   error: '#C00020ee',
   placeholder: '#ffffff80',
   focusedPlaceholder: '#a218f680',
@@ -33,9 +33,9 @@ export const Dark = {
 } as const;
 
 export const DarkOpacity = {
-  c1o15: `${Dark.c1}15`,
-  c1o20: `${Dark.c1}20`,
-  c1o10: `${Dark.c1}10`,
+  shade1o15: `${Dark.shade1}15`,
+  shade1o20: `${Dark.shade1}20`,
+  shade1o10: `${Dark.shade1}10`,
 };
 
 export const BlackShades = {

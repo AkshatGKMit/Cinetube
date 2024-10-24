@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { View, StatusBar } from 'react-native';
 import ThemeContext from '@contexts/ThemeContext';
-import { isAndroid } from '@helpers/helpers';
+import { isAndroid } from '@constants/constants';
 import styles from './styles';
 
 const PlatformStatusBar = () => {

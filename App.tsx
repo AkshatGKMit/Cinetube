@@ -1,12 +1,12 @@
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ThemeContextProvider } from '@contexts/ThemeContext';
-import WrappedApp from '@screens/index';
+import AppContainer from '@screens/index';
 
 const App = () => {
   return (
     <ThemeContextProvider>
       <SafeAreaProvider>
-        <WrappedApp />
+        <AppContainer />
       </SafeAreaProvider>
     </ThemeContextProvider>
   );
