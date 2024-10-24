@@ -1,6 +1,5 @@
-import { View, Text, SafeAreaView } from 'react-native';
-import React from 'react';
-import PlatformStatusBar from '@components/PlatformStatusBar';
+import { Text, SafeAreaView } from 'react-native';
+import PlatformStatusBar from '@components/platformStatusBar';
 import globalStyles from '@styles/global';
 
 const WrappedApp = () => {
