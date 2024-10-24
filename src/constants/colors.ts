@@ -1,3 +1,12 @@
+/**
+ * Consist shades of purple (primary color)
+ * shade1: Light purple
+ * .
+ * .
+ * .
+ * shade7: Dark Purple
+ */
+
 export const Light = {
   shade1: '#7a18e3',
   shade2: '#691abf',
@@ -17,6 +26,15 @@ export const LightOpacity = {
   c1o15: `${Light.shade1}15`,
   c1o20: `${Light.shade1}20`,
 };
+
+/**
+ * Consist shades of purple (primary color)
+ * shade1: Dark purple
+ * .
+ * .
+ * .
+ * shade7: Light Purple
+ */
 
 export const Dark = {
   shade1: '#a218f6',

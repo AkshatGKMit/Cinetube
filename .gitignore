@@ -80,3 +80,4 @@ debug.keystore
 .bundle
 .vscode
 __tests__
+.env
