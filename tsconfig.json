@@ -17,7 +17,5 @@
       "@themes/*": ["src/themes/*"]
     },
     "types": []
-  },
-  "include": ["./src/**/*"],
-  "exclude": ["*.json"]
+  }
 }

@@ -1,11 +1,14 @@
-import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { ThemeContextProvider } from '@contexts/ThemeContext';
+import AppContainer from '@screens/index';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text>Cinetube</Text>
-    </SafeAreaView>
+    <ThemeContextProvider>
+      <SafeAreaProvider>
+        <AppContainer />
+      </SafeAreaProvider>
+    </ThemeContextProvider>
   );
 };
 
