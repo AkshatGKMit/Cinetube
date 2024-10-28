@@ -40,3 +40,66 @@ type DeleteSessionFailureResponseType = ResponseFailure;
 type DeleteSessionSuccessResponseType = { success: true };
 
 type DeleteSessionResponseType = DeleteSessionSuccessResponseType | DeleteSessionFailureResponseType;
+
+type ImageResponseType = {
+  aspect_ratio: number;
+  height: number;
+  file_path: string;
+  width: number;
+};
+
+type ImageResponseTypes = ImageResponseType[];
+
+type VideoResponseType = {
+  name: string;
+  key: string;
+  site: 'YouTube' | 'Vimeo' | string;
+  size: number;
+  type: 'Teaser' | 'Trailer' | 'Featurette';
+  official: boolean;
+  published_at: string;
+  id: string;
+};
+
+type VideoResponseTypes = VideoResponseType[];
+
+type MovieImagesResponseType = {
+  id: number;
+  backdrops: ImageResponseTypes;
+  logos: ImageResponseTypes;
+  posters: ImageResponseTypes;
+};
+
+type MovieDetailsResponseType = {
+  id: number;
+  title: string;
+  release_date: string;
+  original_title: string;
+  overview: string;
+  adult: boolean;
+  popularity: number;
+  backdrop_path: string | null;
+  poster_path: string | null;
+  budget?: number;
+  genres?: { id: number; name: string }[];
+  homepage?: string;
+  imdb_id?: string;
+  revenue?: number;
+  runtime?: number;
+  tagline?: string;
+};
+
+type MovieDetailsResponseTypes = MovieDetailsResponseType[];
+
+type MovieResponseListType = {
+  page: number;
+  results: MovieDetailsResponseTypes;
+  total_pages?: number;
+  total_results?: number;
+};
+
+type PopularMoviesResponseType = MovieResponseListType;
+
+type TopRatedMoviesResponseType = MovieResponseListType;
+
+type SearchMovieResponseType = MovieResponseListType;
