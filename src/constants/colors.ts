@@ -1,20 +1,11 @@
-/**
- * Consist shades of purple (primary color)
- * shade1: Light purple
- * .
- * .
- * .
- * shade7: Dark Purple
- */
-
 export const Light = {
-  shade1: '#7a18e3',
-  shade2: '#691abf',
-  shade3: '#581a9d',
-  shade4: '#48197b',
-  shade5: '#37165c',
-  shade6: '#28133e',
-  shade7: '#190c22',
+  purple10: '#7a18e3',
+  purple20: '#691abf',
+  purple30: '#581a9d',
+  purple40: '#48197b',
+  purple50: '#37165c',
+  purple60: '#28133e',
+  purple70: '#190c22',
   error: '#D00020',
   placeholder: '#00000080',
   focusedPlaceholder: '#7a18e380',
@@ -22,28 +13,19 @@ export const Light = {
 } as const;
 
 export const LightOpacity = {
-  c1o10: `${Light.shade1}10`,
-  c1o15: `${Light.shade1}15`,
-  c1o20: `${Light.shade1}20`,
+  purple10opacity10: `${Light.purple10}10`,
+  purple10opacity15: `${Light.purple10}15`,
+  purple10opacity20: `${Light.purple10}20`,
 };
 
-/**
- * Consist shades of purple (primary color)
- * shade1: Dark purple
- * .
- * .
- * .
- * shade7: Light Purple
- */
-
 export const Dark = {
-  shade1: '#a218f6',
-  shade2: '#b349f8',
-  shade3: '#c36bfa',
-  shade4: '#d28afc',
-  shade5: '#dfa8fe',
-  shade6: '#ebc5ff',
-  shade7: '#f5e2ff',
+  purple10: '#a218f6',
+  purple20: '#b349f8',
+  purple30: '#c36bfa',
+  purple40: '#d28afc',
+  purple50: '#dfa8fe',
+  purple60: '#ebc5ff',
+  purple70: '#f5e2ff',
   error: '#C00020ee',
   placeholder: '#ffffff80',
   focusedPlaceholder: '#a218f680',
@@ -51,9 +33,9 @@ export const Dark = {
 } as const;
 
 export const DarkOpacity = {
-  shade1o15: `${Dark.shade1}15`,
-  shade1o20: `${Dark.shade1}20`,
-  shade1o10: `${Dark.shade1}10`,
+  purple10opacity15: `${Dark.purple10}15`,
+  purple10opacity20: `${Dark.purple10}20`,
+  purple10opacity10: `${Dark.purple10}10`,
 };
 
 export const BlackShades = {
@@ -75,6 +57,7 @@ export const BlackShades = {
   opacityF: '#000000ff',
   black11: '#111111',
   black20: '#202020',
+  black30: '#303030',
 } as const;
 
 export const WhiteShades = {
@@ -96,6 +79,7 @@ export const WhiteShades = {
   opacityF: '#ffffffff',
   whiteEe: '#eeeeee',
   whiteDF: '#dfdfdf',
+  whiteCd: '#cdcdcd',
 } as const;
 
 export const DarkGreyShades = {
@@ -141,6 +125,7 @@ const Colors = {
   lightGrey: LightGreyShades,
   darkGrey: DarkGreyShades,
   black: BlackShades,
+  red: '#ff0000',
   transparent: '#00000000',
 };
 
