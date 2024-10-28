@@ -10,4 +10,9 @@ declare global {
     onPressIn?: (ev?: GestureResponderEvent) => void;
     onPressOut?: (ev?: GestureResponderEvent) => void;
   };
+
+  type LoaderProps = {
+    color?: string;
+    size?: number | 'small' | 'large';
+  };
 }
