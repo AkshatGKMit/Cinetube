@@ -61,7 +61,7 @@ type UserDetailsResponseType = {
   };
 };
 
-type AddToFavoriteFailureResponseType = ResponseSuccess | ResponseFailure;
+type AddFavoriteResponseType = ResponseSuccess | ResponseFailure;
 
 type ImageResponseType = {
   aspect_ratio: number;
