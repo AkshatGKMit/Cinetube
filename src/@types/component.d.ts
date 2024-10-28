@@ -46,4 +46,9 @@ declare global {
     errorMsg?: string;
     addOns?: TextInputProps;
   };
+  
+  type LoaderProps = {
+    color?: string;
+    size?: number | 'small' | 'large';
+  };
 }

@@ -3,12 +3,12 @@ import Colors, { Dark, DarkOpacity, Light, LightOpacity } from '@constants/color
 const Theme: Theme = {
   light: {
     screenBG: Colors.white.whiteEe,
-    statusBar: Light.shade1,
+    statusBar: Light.purple10,
     defaultIcon: Colors.black.opacityF,
     textfield: {
       label: Colors.darkGrey.opacityC,
-      focusedPrimary: Light.shade1,
-      focusedBorder: Light.shade1,
+      focusedPrimary: Light.purple10,
+      focusedBorder: Light.purple10,
       focusedPlaceholder: Light.focusedPlaceholder,
       text: Colors.black.black11,
       error: Light.error,
@@ -20,14 +20,14 @@ const Theme: Theme = {
     },
     dropdown: {
       background: Colors.white.whiteDF,
-      focusedBorder: Light.shade1,
-      focusedItemBG: LightOpacity.c1o15,
+      focusedBorder: Light.purple10,
+      focusedItemBG: LightOpacity.purple10opacity15,
       text: Colors.black.opacityC,
       placeholder: Colors.darkGrey.opacityC,
       ddShadow: Colors.black.opacityF,
     },
     actionButton: {
-      background: Light.shade1,
+      background: Light.purple10,
       text: Colors.white.opacityF,
       disabledBG: Colors.lightGrey.opacityA,
       disabledText: Colors.darkGrey.opacityF,
@@ -35,12 +35,12 @@ const Theme: Theme = {
   },
   dark: {
     screenBG: Colors.black.black11,
-    statusBar: Dark.shade1,
+    statusBar: Dark.purple10,
     defaultIcon: Colors.white.opacityF,
     textfield: {
       label: Colors.lightGrey.opacityF,
-      focusedPrimary: Dark.shade1,
-      focusedBorder: Dark.shade1,
+      focusedPrimary: Dark.purple10,
+      focusedBorder: Dark.purple10,
       focusedPlaceholder: Dark.focusedPlaceholder,
       text: Colors.white.whiteEe,
       error: Dark.error,
@@ -52,14 +52,14 @@ const Theme: Theme = {
     },
     dropdown: {
       background: Colors.black.black20,
-      focusedBorder: Dark.shade1,
-      focusedItemBG: DarkOpacity.shade1o15,
+      focusedBorder: Dark.purple10,
+      focusedItemBG: DarkOpacity.purple10opacity15,
       text: Colors.white.opacityC,
       placeholder: Colors.lightGrey.opacityC,
       ddShadow: Colors.white.opacityF,
     },
     actionButton: {
-      background: Dark.shade1,
+      background: Dark.purple10,
       text: Colors.white.opacityF,
       disabledBG: Colors.darkGrey.opacityA,
       disabledText: Colors.lightGrey.opacityF,
