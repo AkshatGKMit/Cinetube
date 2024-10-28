@@ -2,12 +2,9 @@ type ApiHeaders = {
   'content-type'?: string;
 };
 
-type ApiCallParams<T, Params = {}, Body = {}> = {
-  url: string;
-  method: ApiMethods;
-  headers?: ApiHeaders;
+type ApiCallParams<Params = {}> = {
   params?: Params;
-  data?: Body;
+  timeout?: number;
 };
 
 type ApiCallSuccess<T> = {

@@ -5,6 +5,7 @@ const ApiConstants = {
   BASE_URL: EnvVars.API_BASE_URL!,
   headers: {
     accept: 'application/json',
+    'content-type': 'application/json',
     Authorization: EnvVars.API_BEARER_TOKEN!,
   },
 };
