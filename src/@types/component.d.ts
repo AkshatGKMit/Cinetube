@@ -1,4 +1,4 @@
-import { RefObject } from 'react';
+import { ReactNode, RefObject } from 'react';
 import {
   EnterKeyHintTypeOptions,
   GestureResponderEvent,
@@ -10,6 +10,7 @@ import {
   TextInputProps,
   TextInputSubmitEditingEventData,
   TextStyle,
+  TouchableWithoutFeedbackProps,
   ViewStyle,
 } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
@@ -45,5 +46,14 @@ declare global {
     textInputStyle?: StyleProp<TextStyle>;
     errorMsg?: string;
     addOns?: TextInputProps;
+  };
+
+  type ActionButtonProps = {
+    children: ReactNode | string;
+    onPress?: () => void;
+    style?: StyleProp<ViewStyle>;
+    disabled?: boolean;
+    loading?: boolean;
+    addOns?: TouchableWithoutFeedbackProps;
   };
 }
