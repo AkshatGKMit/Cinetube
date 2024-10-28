@@ -63,6 +63,10 @@ type UserDetailsResponseType = {
 
 type AddFavoriteResponseType = ResponseSuccess | ResponseFailure;
 
+type Genre = { id: number; name: string };
+
+type Genres = Genre[];
+
 type ImageResponseType = {
   aspect_ratio: number;
   height: number;
@@ -103,7 +107,7 @@ type MovieDetailsResponseType = {
   backdrop_path: string | null;
   poster_path: string | null;
   budget?: number;
-  genres?: { id: number; name: string }[];
+  genres?: Genres;
   homepage?: string;
   imdb_id?: string;
   revenue?: number;
