@@ -4,6 +4,12 @@ type ResponseFailure = {
   status_message: string;
 };
 
+type ResponseSuccess = {
+  success: false;
+  status_code: number;
+  status_message: string;
+};
+
 type RequestTokenResponseType = {
   success: boolean;
   expires_at: string;
@@ -40,6 +46,22 @@ type DeleteSessionFailureResponseType = ResponseFailure;
 type DeleteSessionSuccessResponseType = { success: true };
 
 type DeleteSessionResponseType = DeleteSessionSuccessResponseType | DeleteSessionFailureResponseType;
+
+type UserDetailsResponseType = {
+  id: number;
+  name: string;
+  username: string;
+  avatar: {
+    gravatar: {
+      hash: string;
+    };
+    tmdb: {
+      avatar_path: string | null;
+    };
+  };
+};
+
+type AddToFavoriteFailureResponseType = ResponseSuccess | ResponseFailure;
 
 type ImageResponseType = {
   aspect_ratio: number;
@@ -103,3 +125,5 @@ type PopularMoviesResponseType = MovieResponseListType;
 type TopRatedMoviesResponseType = MovieResponseListType;
 
 type SearchMovieResponseType = MovieResponseListType;
+
+type FavoriteMoviesResponseType = MovieResponseListType;
