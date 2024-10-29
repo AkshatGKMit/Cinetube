@@ -81,4 +81,3 @@ debug.keystore
 .vscode
 __tests__
 .env
-DummyScreen.tsx
