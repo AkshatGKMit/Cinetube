@@ -1,4 +1,4 @@
-import { useContext, useMemo } from 'react';
+import { useContext } from 'react';
 import { View, Text } from 'react-native';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 import ThemeContext from '@contexts/ThemeContext';
@@ -12,7 +12,7 @@ const CustomHeader = ({ title, isDrawerHeader }: HeaderProps) => {
     theme: { header: theme },
   } = useContext(ThemeContext);
 
-  const styles = useMemo(() => drawerHeaderStyles(), []);
+  const styles = drawerHeaderStyles();
 
   function _onPressLeftIcon() {
     isDrawerHeader ? dispatch(DrawerActions.toggleDrawer()) : null;

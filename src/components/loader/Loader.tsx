@@ -1,5 +1,5 @@
 import { ActivityIndicator } from 'react-native';
-import { Light } from '@constants/colors';
+import { Light } from '@themes/colors';
 
 const Loader = ({ color, size }: LoaderProps) => {
   return (

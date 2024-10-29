@@ -6,7 +6,7 @@ import Colors, {
   LightGreyShades,
   LightOpacity,
   WhiteShades,
-} from '@constants/colors';
+} from '@themes/colors';
 
 const Theme: Theme = {
   light: {

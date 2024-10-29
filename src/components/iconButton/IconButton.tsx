@@ -1,6 +1,6 @@
 import { TouchableHighlight } from 'react-native';
 import Icon from '@components/icon';
-import Colors from '@constants/colors';
+import Colors from '@themes/colors';
 import styles from './styles';
 
 const IconButton = ({
