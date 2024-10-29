@@ -1,6 +1,6 @@
 import { Text, SafeAreaView } from 'react-native';
 import PlatformStatusBar from '@components/platformStatusBar';
-import globalStyles from '@styles/global';
+import globalStyles from '@themes/globalStyles';
 
 const AppContainer = () => {
   return (
