@@ -1,12 +1,10 @@
-import EnvVars from '../constants/env';
-
 const ApiConstants = {
-  BEARER: `Bearer ${EnvVars.API_BEARER_TOKEN}`!,
-  BASE_URL: EnvVars.API_BASE_URL!,
+  BEARER: process.env.API_BEARER_TOKEN,
+  BASE_URL: process.env.API_BASE_URL,
   headers: {
     accept: 'application/json',
     'content-type': 'application/json',
-    Authorization: EnvVars.API_BEARER_TOKEN!,
+    Authorization: process.env.API_BEARER_TOKEN,
   },
 };
 
