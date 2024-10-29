@@ -15,7 +15,7 @@ class AsyncStorageManager {
   public isUserGuest: boolean = defaultIsUserGuest;
 
   private constructor() {
-    this.loadFromStorage();
+    this.loadStore();
   }
 
   public static getInstance(): AsyncStorageManager {
@@ -25,7 +25,7 @@ class AsyncStorageManager {
     return AsyncStorageManager.instance;
   }
 
-  public async getFromStorage<T>(key: StorageKey): Promise<T | undefined> {
+  public async getStore<T>(key: StorageKey): Promise<T | undefined> {
     try {
       const item = await AsyncStorage.getItem(key);
 
@@ -40,13 +40,13 @@ class AsyncStorageManager {
     }
   }
 
-  private async saveToStorage(key: StorageKey, value: string) {
+  private async saveStoreValue(key: StorageKey, value: string) {
     await AsyncStorage.setItem(key, value);
   }
 
-  private async loadFromStorage() {
-    this.firstTimeAppInstall = (await this.getFromStorage<boolean>('firstTimeAppInstall')) ?? true;
-    this.sessionId = (await this.getFromStorage<Session>('session')) ?? defaultSessionId;
+  private async loadStore() {
+    this.firstTimeAppInstall = (await this.getStore<boolean>('firstTimeAppInstall')) ?? true;
+    this.sessionId = (await this.getStore<Session>('session')) ?? defaultSessionId;
   }
   public setUserAsGuest() {
     this.isUserGuest = true;
@@ -57,7 +57,7 @@ class AsyncStorageManager {
   }
 
   public async saveSessionId(session: Session) {
-    await this.saveToStorage('session', JSON.stringify(session));
+    await this.saveStoreValue('session', JSON.stringify(session));
   }
 
   public async removeSessionId() {
@@ -67,7 +67,7 @@ class AsyncStorageManager {
 
   public clearFirstTimeAppInstall() {
     this.firstTimeAppInstall = false;
-    this.saveToStorage('firstTimeAppInstall', JSON.stringify(false));
+    this.saveStoreValue('firstTimeAppInstall', JSON.stringify(false));
   }
 }
 

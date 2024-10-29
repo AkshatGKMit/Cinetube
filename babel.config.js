@@ -17,7 +17,6 @@ module.exports = {
           '@network': './src/network',
           '@screens': './src/screens',
           '@storage': './src/storage',
-          '@styles': './src/styles',
           '@themes': './src/themes',
         },
       },
