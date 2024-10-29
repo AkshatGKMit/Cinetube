@@ -56,4 +56,9 @@ declare global {
     loading?: boolean;
     addOns?: TouchableWithoutFeedbackProps;
   };
+  
+  type LoaderProps = {
+    color?: string;
+    size?: number | 'small' | 'large';
+  };
 }
