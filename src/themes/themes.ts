@@ -1,10 +1,20 @@
-import Colors, { Dark, DarkOpacity, Light, LightOpacity } from '@constants/colors';
+import Colors, {
+  Dark,
+  DarkGreyShades,
+  DarkOpacity,
+  Light,
+  LightGreyShades,
+  LightOpacity,
+  WhiteShades,
+} from '@constants/colors';
 
 const Theme: Theme = {
   light: {
     screenBG: Colors.white.whiteEe,
     statusBar: Light.purple10,
     defaultIcon: Colors.black.opacityF,
+    primaryText: Colors.black.opacityF,
+    secondaryText: DarkGreyShades.opacityF,
     textfield: {
       label: Colors.darkGrey.opacityC,
       focusedPrimary: Light.purple10,
@@ -32,11 +42,23 @@ const Theme: Theme = {
       disabledBG: Colors.lightGrey.opacityA,
       disabledText: Colors.darkGrey.opacityF,
     },
+    header: {
+      background: Light.purple10,
+      content: WhiteShades.opacityF,
+    },
+    drawer: {
+      background: Colors.white.whiteCd,
+      routeContent: Colors.black.opacityF,
+      focusedRouteBG: Dark.purple60,
+      focusedRouteFG: Light.purple10,
+    },
   },
   dark: {
     screenBG: Colors.black.black11,
     statusBar: Dark.purple10,
     defaultIcon: Colors.white.opacityF,
+    primaryText: Colors.white.opacityF,
+    secondaryText: LightGreyShades.opacityF,
     textfield: {
       label: Colors.lightGrey.opacityF,
       focusedPrimary: Dark.purple10,
@@ -63,6 +85,16 @@ const Theme: Theme = {
       text: Colors.white.opacityF,
       disabledBG: Colors.darkGrey.opacityA,
       disabledText: Colors.lightGrey.opacityF,
+    },
+    header: {
+      background: Light.purple10,
+      content: WhiteShades.opacityF,
+    },
+    drawer: {
+      background: Colors.white.whiteCd,
+      routeContent: Colors.black.opacityF,
+      focusedRouteBG: Dark.purple60,
+      focusedRouteFG: Light.purple10,
     },
   },
 };

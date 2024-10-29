@@ -20,7 +20,7 @@ declare global {
 
   type IconProps = {
     family: IconFamily;
-    name: string;
+    name?: string;
     size?: number;
     color?: string;
     style?: StyleProp<TextStyle>;

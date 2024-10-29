@@ -46,9 +46,14 @@ declare global {
     errorMsg?: string;
     addOns?: TextInputProps;
   };
-  
+
   type LoaderProps = {
     color?: string;
     size?: number | 'small' | 'large';
+  };
+
+  type HeaderProps = {
+    title: string;
+    isDrawerHeader?: boolean;
   };
 }

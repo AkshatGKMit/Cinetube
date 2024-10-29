@@ -5,6 +5,8 @@ declare global {
     statusBar: string;
     screenBG: string;
     defaultIcon: string;
+    primaryText: string;
+    secondaryText: string;
     textfield: {
       focusedPrimary: string;
       unfocusedPrimary: string;
@@ -31,6 +33,16 @@ declare global {
       text: string;
       disabledBG: string;
       disabledText: string;
+    };
+    header: {
+      background: string;
+      content: string;
+    };
+    drawer: {
+      background: string;
+      routeContent: string;
+      focusedRouteBG: string;
+      focusedRouteFG: string;
     };
   }
 
