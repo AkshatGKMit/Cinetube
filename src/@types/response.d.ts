@@ -1,3 +1,5 @@
+//* Global Response Type
+
 type ResponseFailure = {
   success: false;
   status_code: number;
@@ -16,6 +18,8 @@ type RequestTokenResponseType = {
   request_token: string;
 };
 
+//* Authentication Url Route Response Type
+
 type CreateGuestSessionResponseType = {
   success: boolean;
   guest_session_id: string;
@@ -33,7 +37,7 @@ type CreateSessionSuccessResponseType = {
   session_id: string;
 };
 
-type CreateGuestResponseType = CreateSessionSuccessResponseType | CreateSessionFailureResponseType;
+type CreateSessionResponseType = CreateSessionSuccessResponseType | CreateSessionFailureResponseType;
 
 type CreateSessionViaLoginFailureResponseType = ResponseFailure;
 
@@ -46,6 +50,8 @@ type DeleteSessionFailureResponseType = ResponseFailure;
 type DeleteSessionSuccessResponseType = { success: true };
 
 type DeleteSessionResponseType = DeleteSessionSuccessResponseType | DeleteSessionFailureResponseType;
+
+//* Account Url Route Response Type
 
 type UserDetailsResponseType = {
   id: number;
@@ -63,6 +69,8 @@ type UserDetailsResponseType = {
 
 type AddFavoriteResponseType = ResponseSuccess | ResponseFailure;
 
+//* Movie Url Route Response Type
+
 type Genre = { id: number; name: string };
 
 type Genres = Genre[];
@@ -76,7 +84,7 @@ type ImageResponseType = {
 
 type ImageResponseTypes = ImageResponseType[];
 
-type VideoResponseType = {
+type MovieVideoResponseType = {
   name: string;
   key: string;
   site: 'YouTube' | 'Vimeo' | string;
@@ -87,7 +95,7 @@ type VideoResponseType = {
   id: string;
 };
 
-type VideoResponseTypes = VideoResponseType[];
+type MovieVideosResponseTypes = MovieVideoResponseType[];
 
 type MovieImagesResponseType = {
   id: number;
@@ -117,6 +125,10 @@ type MovieDetailsResponseType = {
 
 type MovieDetailsResponseTypes = MovieDetailsResponseType[];
 
+type MovieSimilarResponseType = { id: number; results: MovieDetailsResponseTypes };
+
+//* Movie Lists Url Route Response Type
+
 type MovieResponseListType = {
   page: number;
   results: MovieDetailsResponseTypes;
@@ -124,9 +136,7 @@ type MovieResponseListType = {
   total_results?: number;
 };
 
-type PopularMoviesResponseType = MovieResponseListType;
-
-type TopRatedMoviesResponseType = MovieResponseListType;
+type PopularOrTopRatedMoviesResponseType = MovieResponseListType;
 
 type SearchMovieResponseType = MovieResponseListType;
 

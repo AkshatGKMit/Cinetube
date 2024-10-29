@@ -1,8 +1,12 @@
+//* Global Request Type
+
 type SessionRequestType = { session_id: string };
 
 type PageRequestType = { page: number };
 
-type CreateSessionRequestBodyType = SessionRequestType;
+//* Authentication Url Route Request Type
+
+type CreateSessionRequestBodyType = { request_token: string };
 
 type CreateSessionViaLoginRequestBodyType = {
   request_token: string;
@@ -11,6 +15,8 @@ type CreateSessionViaLoginRequestBodyType = {
 };
 
 type DeleteSessionRequestBodyType = SessionRequestType;
+
+//* Account Url Route Request Type
 
 type UserDetailsRequestParamsType = SessionRequestType;
 
@@ -24,8 +30,8 @@ type AddFavoriteRequestBodyType = {
 
 type FavoriteMoviesRequestParamsType = SessionRequestType & PageRequestType;
 
-type PopularRequestParamsType = PageRequestType;
+//* Movie Lists Url Route Request Type
 
-type TopRatedRequestParamsType = PageRequestType;
+type PopularOrTopRatedRequestParamsType = PageRequestType;
 
 type SearchRequestParamsType = PageRequestType & { query: string };
