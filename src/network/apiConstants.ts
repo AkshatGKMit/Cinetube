@@ -1,4 +1,4 @@
-import EnvVars from './env';
+import EnvVars from '../constants/env';
 
 const ApiConstants = {
   BEARER: `Bearer ${EnvVars.API_BEARER_TOKEN}`!,
