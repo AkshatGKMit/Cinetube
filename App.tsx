@@ -1,7 +1,7 @@
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import AsyncStorageManager from '@storage/AsyncStorageManager';
 import { ThemeContextProvider } from '@contexts/ThemeContext';
-import AppContainer from '@screens/index';
+import { AppContainer } from '@screens/index';
 import { useEffect } from 'react';
 
 const App = () => {

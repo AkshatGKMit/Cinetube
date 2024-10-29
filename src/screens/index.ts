@@ -1,3 +1,4 @@
 import AppContainer from './AppContainer/AppContainer';
+import LoginScreen from './loginScreen/LoginScreen';
 
-export default AppContainer;
+export { AppContainer, LoginScreen };
