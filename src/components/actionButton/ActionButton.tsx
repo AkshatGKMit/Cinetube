@@ -3,13 +3,21 @@ import { ActivityIndicator, Text, TouchableWithoutFeedback, View } from 'react-n
 import Colors from '@constants/colors';
 import { isString } from '@helpers/helpers';
 import actionButtonStyles from './styles';
+import Loader from '@components/loader';
 
 const ActionButton = ({ children, onPress, style: customStyle, disabled, loading, addOns }: ActionButtonProps) => {
-  const [styles] = useState(actionButtonStyles());
+  const styles = actionButtonStyles();
   const [isPressIn, setIsPressIn] = useState(false);
 
   const handlePressIn = () => setIsPressIn(true);
   const handlePressOut = () => setIsPressIn(false);
+
+  const buttonViewStyles = [
+    styles.button,
+    isPressIn ? styles.pressIn : null,
+    disabled ? styles.disabledBG : null,
+    customStyle,
+  ];
 
   return (
     <TouchableWithoutFeedback
@@ -19,9 +27,9 @@ const ActionButton = ({ children, onPress, style: customStyle, disabled, loading
       disabled={disabled || loading}
       {...addOns}
     >
-      <View style={[styles.button, isPressIn ? styles.pressIn : null, disabled ? styles.disabledBG : null, customStyle]}>
+      <View style={buttonViewStyles}>
         {loading ? (
-          <ActivityIndicator
+          <Loader
             size={20}
             color={Colors.white.opacityF}
           />
