@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import { Component, ErrorInfo } from 'react';
 import { ErrorScreen } from '@screens/index';
 
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: { children: ReactNode }) {
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: '' };
   }
@@ -11,9 +11,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return { hasError: true, error: err.message };
   }
 
-  componentDidCatch(error: Error, info: React.ErrorInfo) {
+  componentDidCatch(error: Error, info: ErrorInfo) {
     this.setState({ error: `${error.name}: ${error.message}` });
-    console.error('Error caught in ErrorBoundary:', error, info);
   }
 
   handleRetry = () => {
@@ -22,6 +21,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
   render() {
     const { error, hasError } = this.state;
+
     if (hasError) {
       return (
         <ErrorScreen
@@ -30,6 +30,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         />
       );
     }
+
     return <>{this.props.children}</>;
   }
 }

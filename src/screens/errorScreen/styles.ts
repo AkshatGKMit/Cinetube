@@ -1,5 +1,5 @@
-import Colors from '@constants/colors';
 import { StyleSheet } from 'react-native';
+import Colors from '@constants/colors';
 
 const styles = StyleSheet.create({
   errorView: {
@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   imageView: {
-    width: '100%',
-    height: 300,
+    width: '25%',
+    height: 100,
     marginBottom: 20,
     resizeMode: 'contain',
   },

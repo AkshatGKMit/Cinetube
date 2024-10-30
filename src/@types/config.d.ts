@@ -6,3 +6,8 @@ interface ErrorBoundaryState {
   hasError: boolean;
   error: string;
 }
+
+type ErrorScreenProps = {
+  error: string;
+  onRetry: () => void;
+};
