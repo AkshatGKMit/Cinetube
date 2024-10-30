@@ -1,4 +1,3 @@
-import { AxiosResponse } from 'axios';
 import axiosInstance from './instance';
 
 async function _get<T, Params = {}>(url: string, config?: ApiCallParams<Params>): Promise<ApiCallResponse<T>> {
