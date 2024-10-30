@@ -8,8 +8,8 @@ const AppContainer = () => {
   const netInfo = useNetInfo();
 
   useEffect(() => {
-    if (netInfo.isConnected !== null) {
-      const { isConnected } = netInfo;
+    const { isConnected } = netInfo;
+    if (isConnected !== null) {
       if (!isConnected) throw new Error('No internet connection');
     }
   }, [netInfo]);
