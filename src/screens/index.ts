@@ -1,3 +1,4 @@
 import AppContainer from './AppContainer/AppContainer';
+import ErrorScreen from './errorScreen/ErrorScreen';
 
-export default AppContainer;
+export { AppContainer, ErrorScreen };
